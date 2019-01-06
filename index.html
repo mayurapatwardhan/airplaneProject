@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Flight Show</title>
+
+        <link type="text/css" rel="stylesheet" href="final.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <script type="text/javascript" src="index.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8C-7kFlIogsW96kw6ba-5zm7fuuRLnmA&callback=initMap"type="text/javascript"></script>
+        
+    </head>
+
+    <body>
+        <div class="page-container">
+            <button id="home">Go Back</button>
+            <div class="search-container">
+                Year : <input type="number" id="input_year" min="1990" max="2999"/> &nbsp;&nbsp; Month : <input type="number" id="input_month" min="1" max="12"/> &nbsp;&nbsp; Day : <input type="number" id="input_day" min="1" max="31" />
+                &nbsp;&nbsp; Time : <input type="range" min="0" max="1439" value="0" class="slider" id="myRange" oninput="onUpdateSlider(this.value)">
+                    &nbsp; <label id="time_show">00:00</label>&nbsp;&nbsp;<input type="button" id="btn_filter" onclick="onClickFilter();" value="Filter"/>
+            </div>
+            <div class="map-container">
+                <div id="map" style="width: 100%; height: 100%; position: relative; overflow: hidden;"></div>
+            </div>
+        </div>
+    </body>
+</html>
